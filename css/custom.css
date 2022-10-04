@@ -1,0 +1,18 @@
+/*====================
+Common css
+=====================*/
+img {
+    max-width: 100%;
+}
+
+
+
+/*===================
+Header Area
+====================*/
+#header_area {
+    padding: 15px 0;
+}
+.logo img {
+    max-width: 100%;
+}

@@ -11,6 +11,7 @@
     
 <div id="header_area">
     <div class="container">
+        <div class="row">
         <div class="col-lg-3">
             <div class="logo">
                 <!-- Method: 1 -->
@@ -19,6 +20,16 @@
                 <!-- Method: 2 -->
                 <a href="#"><img src="<?php echo get_theme_mod('skytheme_logo');?>" alt="logo"></a>
             </div>
+        </div>
+        <div class="col-lg-9">
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Other</a></li>
+            </ul>
+        </div>
         </div>
     </div>
 </div>

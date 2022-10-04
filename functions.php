@@ -10,11 +10,13 @@
 // 01. Enqueue script filse in theme (css, js => jQuery and other files)
  function themesky_files () {
    // Add CSS Files 
+   wp_enqueue_style('Style', get_stylesheet_uri( ));
     wp_register_style('normalize', get_template_directory_uri( ).'/css/normalize.css', array(), '8.0.1', 'all');
     wp_enqueue_style('normalize');
     wp_register_style('bootstrap', get_template_directory_uri( ).'/css/bootstrap.min.css', array(),'5.2.1', 'all' );
     wp_enqueue_style('bootstrap');
-    wp_enqueue_style('Style', get_stylesheet_uri( ));
+    wp_register_style('custom', get_template_directory_uri( ).'/css/custom.css', array(),'1.0', 'all' );
+    wp_enqueue_style('custom');
  }
    // Add js files
    wp_enqueue_script('jQuery',get_template_directory_uri( ).'/js/jquery-3.6.1.min.js', array(),'3.6.1', true );
