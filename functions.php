@@ -1,13 +1,15 @@
 <?php
-/**
- * Skytheme Functions
- */
+/*******************************
+ ****** Skytheme Functions *****
+ *******************************/
 
  //Theme Title
  add_theme_support('title-tag' );
 
 
-// 01. Enqueue script filse in theme (css, js => jQuery and other files)
+/*===============================================================
+Enqueue script filse in theme (css, js => jQuery and other files)
+================================================================*/
  function themesky_files () {
    // Add CSS Files 
    wp_enqueue_style('Style', get_stylesheet_uri( ));
@@ -25,9 +27,20 @@
 
  add_action('wp_enqueue_scripts', 'themesky_files' );
 
-// Theme Function
+/*===========================
+Add Google Fonts in WP_theme.
+============================*/
+function themesky_fonts () {
+   wp_enqueue_style('google_fonts','https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap', false );
+ }
 
-// 02. Customize Header area => Upload logo / Customize Register
+add_action('wp_enqueue_scripts', 'themesky_fonts' );
+
+/*==================================================================================================
+                                       WP Theme Function 
+====================================================================================================*/
+
+// 01. Customize Header area => Upload logo / Customize Register
 function skytheme_customize_register( $wp_customize ) {
    $wp_customize->add_section('skytheme_header_area', array(
       'title' =>__('Header Area', 'skytheme'),
@@ -46,5 +59,5 @@ function skytheme_customize_register( $wp_customize ) {
  }
  add_action( 'customize_register', 'skytheme_customize_register' );
 
- // 03. Register a menu in WordPress
+ // 02. Register a menu in WordPress
 
