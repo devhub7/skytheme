@@ -3,13 +3,16 @@
  ****** Skytheme Functions *****
  *******************************/
 
+// 01. Enqueue scripts and necessary files
+// 02. Add Google Fonts
+
+
  //Theme Title
  add_theme_support('title-tag' );
 
-
-/*===============================================================
-Enqueue script filse in theme (css, js => jQuery and other files)
-================================================================*/
+/*========================================================================================
+         01. Enqueue script filse in theme (css, js => jQuery and other files)
+========================================================================================*/
  function themesky_files () {
    // Add CSS Files 
    wp_enqueue_style('Style', get_stylesheet_uri( ));
@@ -27,9 +30,11 @@ Enqueue script filse in theme (css, js => jQuery and other files)
 
  add_action('wp_enqueue_scripts', 'themesky_files' );
 
-/*===========================
-Add Google Fonts in WP_theme.
-============================*/
+/*========================================================================================
+                        02. Add Google Fonts in WP_theme.
+=========================================================================================*/
+
+
 function themesky_fonts () {
    wp_enqueue_style('google_fonts','https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap', false );
  }
@@ -39,6 +44,13 @@ add_action('wp_enqueue_scripts', 'themesky_fonts' );
 /*==================================================================================================
                                        WP Theme Function 
 ====================================================================================================*/
+
+
+/****************************************************************************************************
+  01. Customize Header area => Upload logo / Customize Register
+  02. Register a menu in WordPress
+****************************************************************************************************/
+
 
 // 01. Customize Header area => Upload logo / Customize Register
 function skytheme_customize_register( $wp_customize ) {
@@ -60,4 +72,5 @@ function skytheme_customize_register( $wp_customize ) {
  add_action( 'customize_register', 'skytheme_customize_register' );
 
  // 02. Register a menu in WordPress
+  register_nav_menu('main_menu', __('Main Menu', 'skytheme') );
 

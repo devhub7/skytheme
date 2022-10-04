@@ -22,13 +22,7 @@
             </div>
         </div>
         <div class="col-lg-9">
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Other</a></li>
-            </ul>
+            <?php wp_nav_menu(array('theme_location' => 'main_menu', 'menu_id' => 'nav' ) );?>
         </div>
         </div>
     </div>
