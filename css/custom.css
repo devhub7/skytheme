@@ -33,3 +33,66 @@ Header Area
 Navigation - Drop down menu
 =========================*/
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ED1C24;
+}
+ul#nav {
+  margin-top: 20px;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+ul#nav:after {
+position: absolute;
+width: 100%;
+height: 50%;
+content: '';
+left: 0;
+bottom: 0;
+background: #d00d14;
+z-index: -1;
+}
+
+ul#nav li {
+  display: inline-block;
+  position: relative;
+}
+
+ul#nav li a {
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  padding: 10px 20px;
+}
+ul#nav li:hover > a {
+  background-color: #000;
+}
+
+/*Drop Down Menu Style*/
+ul#nav ul {
+  position: absolute;
+  background-color: #ED1C24;
+  width: 180px;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease .3s;
+}
+ul#nav li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+ul#nav ul li {
+  display: block;
+}
+ul#nav ul ul {
+  left: 180px;
+  top: 0;
+}
+ul#nav ul{
+  text-align: left;
+}
