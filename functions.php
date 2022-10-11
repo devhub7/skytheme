@@ -75,6 +75,27 @@ function skytheme_customize_register( $wp_customize ) {
    )));
 
 // 02. Menu Position 
+   $wp_customize->add_section('skytheme_menu_option', array(
+      'title' =>__('Menu Position Option', 'skytheme'),
+      'description' =>'If You interested to Change your Menu Position you cand do it from here.'
+   ));
+
+   $wp_customize->add_setting('skytheme_menu_position', array(
+      'default' =>'right_ menu',
+   ));
+   $wp_customize->add_control('skytheme_menu_position', array(
+      'label'=> 'Menu Position',
+      'description' =>'Select Your Menu Position',
+      'setting' => 'skytheme_menu_position',
+      'section' => 'skytheme_menu_option',
+      'type' => 'radio', 
+      'choices' => array(
+         'left_menu' => 'Left Menu',
+         'right_menu' => 'Right Menu',
+         'center_menu' => 'Center Menu',
+      ),
+   ));
+
 
  }
  add_action( 'customize_register', 'skytheme_customize_register' );

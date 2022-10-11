@@ -31,6 +31,7 @@ Header Area
 }
 /*=========================
 Navigation - Drop down menu
+Default CSS for Left Menu
 =========================*/
 
 ul {
@@ -95,4 +96,22 @@ ul#nav ul ul {
 }
 ul#nav ul{
   text-align: left;
+}
+
+
+/*Menu Position*/
+
+div#header_area.center_menu .col-lg-3{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+div#header_area.center_menu .logo img{
+  width: 25%;
+}
+div#header_area.center_menu .col-lg-9{
+  width: 100%;
+}
+div#header_area.center_menu  ul#nav {
+  text-align: center;
 }
