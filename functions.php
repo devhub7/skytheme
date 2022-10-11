@@ -47,13 +47,18 @@ add_action('wp_enqueue_scripts', 'themesky_fonts' );
 
 
 /****************************************************************************************************
+  00. Register a menu in WordPress   
   01. Customize Header area => Upload logo / Customize Register
-  02. Register a menu in WordPress
+  02. Menu Position 
 ****************************************************************************************************/
 
 
-// 01. Customize Header area => Upload logo / Customize Register
+ // 0. Register a menu in WordPress
+ register_nav_menu('main_menu', __('Main Menu', 'skytheme') );
+
 function skytheme_customize_register( $wp_customize ) {
+
+// 01. Customize Header area => Upload logo / Customize Register
    $wp_customize->add_section('skytheme_header_area', array(
       'title' =>__('Header Area', 'skytheme'),
       'description' =>'If You interested to update your header area you cand do it from here.'
@@ -68,9 +73,10 @@ function skytheme_customize_register( $wp_customize ) {
       'setting' => 'skytheme_logo',
       'section' => 'skytheme_header_area',
    )));
+
+// 02. Menu Position 
+
  }
  add_action( 'customize_register', 'skytheme_customize_register' );
 
- // 02. Register a menu in WordPress
-  register_nav_menu('main_menu', __('Main Menu', 'skytheme') );
 
